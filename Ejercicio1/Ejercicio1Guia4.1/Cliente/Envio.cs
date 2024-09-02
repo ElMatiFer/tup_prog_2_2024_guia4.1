@@ -28,8 +28,8 @@ namespace Ejercicio1Guia4._1.Cliente
         public int CantidadCostos 
         {
             get
-            {
-                return costos.Count;
+            {     
+                 return costos.Count;
             } 
         }
         public Envio(int numeroAduanero)
@@ -37,12 +37,13 @@ namespace Ejercicio1Guia4._1.Cliente
             NumeroAduanero = numeroAduanero;
         }
         public ICosto VerCosto(int idx)
-        {
-            return costos[idx] as ICosto;
+        {    
+              return costos[idx] as ICosto;
         }
         public ICosto CrearCosto(string concepto, double valor)
         {
             ICosto costo = new Costo(concepto, valor);
+            costos.Add(costo);
             return costo;
         }
         public int CompareTo(object obj)
@@ -58,7 +59,6 @@ namespace Ejercicio1Guia4._1.Cliente
         public override string ToString()
         {
             return $"Envio: {NumeroAduanero}";
-
         }
     }
 }

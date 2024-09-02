@@ -16,7 +16,7 @@ namespace Ejercicio1Guia4._1.Proveedores
         }
         public void ProcesarEnvios(IProcesable[] envios)
         {
-            if (envios != null && envios.Length > 0)
+            if (envios != null)
             {
                 foreach (IProcesable a in envios)
                 {
